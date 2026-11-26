@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
-@section('title', 'Dashboard Admin — @difMarket')
+@section('title', 'Dashboard Admin — Zahran Kopi')
 @section('page_title', 'Ringkasan Dashboard')
-@section('page_subtitle', 'Statistik katalog produk dan aktivitas marketplace @difMarket')
+@section('page_subtitle', 'Statistik katalog produk dan aktivitas marketplace Zahran Kopi')
 
 @section('content')
     <!-- Kartu Statistik -->

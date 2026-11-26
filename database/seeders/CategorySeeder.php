@@ -8,7 +8,7 @@ use Illuminate\Database\Seeder;
 class CategorySeeder extends Seeder
 {
     /**
-     * Mengisi data awal kategori produk UMKM @difMarket.
+     * Mengisi data awal kategori produk UMKM Zahran Kopi.
      */
     public function run(): void
     {

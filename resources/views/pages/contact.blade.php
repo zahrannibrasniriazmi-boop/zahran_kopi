@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Kontak Kami — @difMarket')
+@section('title', 'Kontak Kami — Zahran Kopi')
 
 @section('content')
     <section class="bg-white border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Layanan &amp; Kemitraan</span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#20243A] mt-1">Hubungi @difMarket</h1>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#20243A] mt-1">Hubungi Zahran Kopi</h1>
             <p class="mt-2.5 text-sm sm:text-base text-slate-500 max-w-2xl">
                 Punya pertanyaan seputar produk UMKM, kerja sama pemasaran, atau ingin mendaftarkan produk Anda? Kirimkan pesan melalui formulir di bawah ini.
             </p>
@@ -30,8 +30,8 @@
                         </div>
                         <div>
                             <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Email</p>
-                            <a href="mailto:halo@difmarket.id" class="text-sm font-bold text-[#20243A] hover:text-[#6C4AB6]">
-                                halo@difmarket.id
+                            <a href="mailto:halo@zahrankopi.id" class="text-sm font-bold text-[#20243A] hover:text-[#6C4AB6]">
+                                halo@zahrankopi.id
                             </a>
                         </div>
                     </div>

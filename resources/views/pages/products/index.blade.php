@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Katalog Produk UMKM — @difMarket')
+@section('title', 'Katalog Produk UMKM — Zahran Kopi')
 
 @section('content')
     <section class="bg-white border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Katalog @difMarket</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Katalog Zahran Kopi</span>
                     <h1 class="text-3xl font-extrabold text-[#20243A] mt-1">
                         {{ $activeCategory ? 'Produk Kategori: ' . $activeCategory->name : 'Jelajahi Produk UMKM' }}
                     </h1>

@@ -10,7 +10,7 @@ use Illuminate\View\View;
 class ContactController extends Controller
 {
     /**
-     * Menampilkan halaman kontak @difMarket.
+     * Menampilkan halaman kontak Zahran Kopi.
      */
     public function index(): View
     {
@@ -26,6 +26,6 @@ class ContactController extends Controller
 
         return redirect()
             ->route('contact.index')
-            ->with('success', 'Terima kasih! Pesan Anda telah kami terima dan akan segera ditindaklanjuti oleh tim @difMarket.');
+            ->with('success', 'Terima kasih! Pesan Anda telah kami terima dan akan segera ditindaklanjuti oleh tim Zahran Kopi.');
     }
 }

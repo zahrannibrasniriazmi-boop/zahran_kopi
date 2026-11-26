@@ -54,7 +54,7 @@ class AuthController extends Controller
 
             return redirect()
                 ->intended(route('admin.dashboard'))
-                ->with('success', 'Selamat datang kembali di Dashboard Admin @difMarket!');
+                ->with('success', 'Selamat datang kembali di Dashboard Admin Zahran Kopi!');
         }
 
         return back()

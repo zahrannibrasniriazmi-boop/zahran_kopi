@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Kategori Produk UMKM — @difMarket')
+@section('title', 'Kategori Produk UMKM — Zahran Kopi')
 
 @section('content')
     <section class="bg-white border-b border-slate-200/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Direktori Kategori</span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#20243A] mt-1">Kategori Produk @difMarket</h1>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#20243A] mt-1">Kategori Produk Zahran Kopi</h1>
             <p class="mt-2.5 text-sm sm:text-base text-slate-500 max-w-2xl">
                 Pilih kategori untuk menelusuri produk-produk pilihan hasil karya pelaku UMKM Indonesia.
             </p>

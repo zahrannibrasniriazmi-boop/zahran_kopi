@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami — @difMarket')
+@section('title', 'Tentang Kami — Zahran Kopi')
 
 @section('content')
     <!-- Hero Tentang Kami -->
@@ -8,13 +8,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
                 <span class="inline-block px-4 py-1.5 rounded-full bg-white/15 text-[#FF9F43] text-xs font-bold uppercase tracking-widest">
-                    Profil Usaha @difMarket
+                    Profil Usaha Zahran Kopi
                 </span>
                 <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
                     Menghadirkan Karya Terbaik UMKM Indonesia ke Panggung Digital
                 </h1>
                 <p class="mt-5 text-base sm:text-lg text-white/85 leading-relaxed">
-                    <strong>@difMarket</strong> adalah platform marketplace UMKM modern yang dibangun untuk mempermudah pelaku usaha mikro, kecil, dan menengah memasarkan produk unggulannya secara online dengan tampilan profesional dan akses langsung ke pembeli.
+                    <strong>Zahran Kopi</strong> adalah platform marketplace UMKM modern yang dibangun untuk mempermudah pelaku usaha mikro, kecil, dan menengah memasarkan produk unggulannya secara online dengan tampilan profesional dan akses langsung ke pembeli.
                 </p>
             </div>
         </div>
@@ -62,10 +62,10 @@
             <div class="lg:col-span-5">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Tujuan &amp; Dampak</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-[#20243A] mt-2">
-                    Manfaat Nyata @difMarket bagi Pelaku UMKM
+                    Manfaat Nyata Zahran Kopi bagi Pelaku UMKM
                 </h2>
                 <p class="mt-4 text-slate-600 leading-relaxed">
-                    Transformasi digital tidak harus rumit. @difMarket hadir membantu UMKM naik kelas dari pemasaran konvensional menjadi toko online yang terstruktur dan siap bersaing.
+                    Transformasi digital tidak harus rumit. Zahran Kopi hadir membantu UMKM naik kelas dari pemasaran konvensional menjadi toko online yang terstruktur dan siap bersaing.
                 </p>
                 <div class="mt-6 flex flex-wrap gap-3">
                     <a href="{{ route('products.index') }}" class="px-6 py-3 rounded-full bg-[#6C4AB6] hover:bg-[#57389D] text-white text-sm font-bold transition-colors">

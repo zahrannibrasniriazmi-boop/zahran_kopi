@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta_description', '@difMarket - Marketplace produk UMKM lokal Indonesia modern, berkualitas, dan terpercaya.')">
-    <title>@yield('title', '@difMarket — Marketplace UMKM Indonesia')</title>
+    <meta name="description" content="@yield('meta_description', 'Zahran Kopi - Marketplace produk UMKM lokal Indonesia modern, berkualitas, dan terpercaya.')">
+    <title>@yield('title', 'Zahran Kopi — Marketplace UMKM Indonesia')</title>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,15 +116,15 @@
                         Platform marketplace modern yang menghubungkan pelaku UMKM lokal unggulan Indonesia dengan masyarakat luas secara mudah, aman, dan terpercaya.
                     </p>
                     <div class="mt-5 flex items-center gap-3">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram @difMarket"
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram Zahran Kopi"
                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#FF9F43] flex items-center justify-center transition-colors">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.25-2.5a1 1 0 110 2 1 1 0 010-2z"/></svg>
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook @difMarket"
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook Zahran Kopi"
                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#FF9F43] flex items-center justify-center transition-colors">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.6V4.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V11H7.5v3h2.8v8h3.2z"/></svg>
                         </a>
-                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp @difMarket"
+                        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Zahran Kopi"
                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#FF9F43] flex items-center justify-center transition-colors">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5.1-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg>
                         </a>
@@ -161,7 +161,7 @@
                         </li>
                         <li class="flex items-start gap-2.5">
                             <span class="text-[#FF9F43] font-bold">Email:</span>
-                            <span>halo@difmarket.id</span>
+                            <span>halo@zahrankopi.id</span>
                         </li>
                         <li class="flex items-start gap-2.5">
                             <span class="text-[#FF9F43] font-bold">WhatsApp:</span>
@@ -172,7 +172,7 @@
             </div>
 
             <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-                <p>&copy; {{ date('Y') }} @difMarket. Seluruh hak cipta dilindungi. Dibuat untuk memberdayakan UMKM Indonesia.</p>
+                <p>&copy; {{ date('Y') }} Zahran Kopi. Seluruh hak cipta dilindungi. Dibuat untuk memberdayakan UMKM Indonesia.</p>
                 <p>Laravel {{ app()->version() }} &bull; Desain Modern UMKM</p>
             </div>
         </div>

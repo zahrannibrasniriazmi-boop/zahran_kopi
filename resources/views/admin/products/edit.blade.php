@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Edit Produk — Admin @difMarket')
+@section('title', 'Edit Produk — Admin Zahran Kopi')
 @section('page_title', 'Edit Produk: ' . $product->name)
 @section('page_subtitle', 'Perbarui informasi atau gambar produk UMKM')
 

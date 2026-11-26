@@ -243,7 +243,7 @@ class ProductSeeder extends Seeder
             }
 
             imagettftext($img, 14, 0, 120, 415, $mutedColor, $fontRegular, 'Oleh: ' . $seller);
-            imagettftext($img, 13, 0, 120, 455, $primaryColor, $fontBold, '@difMarket • Produk UMKM Asli Indonesia');
+            imagettftext($img, 13, 0, 120, 455, $primaryColor, $fontBold, 'Zahran Kopi • Produk UMKM Asli Indonesia');
         } else {
             imagestring($img, 4, 135, 160, $badge, $whiteColor);
             $lines = array_slice(explode("\n", wordwrap($title, 34, "\n")), 0, 3);
@@ -253,7 +253,7 @@ class ProductSeeder extends Seeder
                 $yPos += 28;
             }
             imagestring($img, 4, 120, 405, 'Oleh: ' . $seller, $mutedColor);
-            imagestring($img, 3, 120, 445, '@difMarket - Marketplace UMKM', $primaryColor);
+            imagestring($img, 3, 120, 445, 'Zahran Kopi - Marketplace UMKM', $primaryColor);
         }
 
         imagepng($img, $fullPath, 6);

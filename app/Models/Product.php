@@ -74,7 +74,7 @@ class Product extends Model
         }
 
         $message = sprintf(
-            "Halo %s, saya tertarik dengan produk *%s* (%s) di @difMarket. Apakah stok masih tersedia?",
+            "Halo %s, saya tertarik dengan produk *%s* (%s) di Zahran Kopi. Apakah stok masih tersedia?",
             $this->seller_name ?: 'Penjual UMKM',
             $this->name,
             $this->formatted_price

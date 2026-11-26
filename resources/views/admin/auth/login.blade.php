@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Admin — @difMarket</title>
+    <title>Login Admin — Zahran Kopi</title>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
                 </span>
                 <h1 class="mt-3 text-2xl font-extrabold text-[#20243A]">Masuk ke Dashboard</h1>
                 <p class="mt-1 text-sm text-slate-500">
-                    Kelola produk UMKM, kategori, dan pesan pelanggan @difMarket.
+                    Kelola produk UMKM, kategori, dan pesan pelanggan Zahran Kopi.
                 </p>
             </div>
 
@@ -44,7 +44,7 @@
                            value="{{ old('email') }}"
                            required
                            autofocus
-                           placeholder="admin@difmarket.id"
+                           placeholder="admin@zahrankopi.id"
                            class="w-full px-4 py-3 rounded-2xl bg-[#F8F9FC] border @error('email') border-rose-400 @else border-slate-200 @enderror text-sm focus:outline-none focus:border-[#6C4AB6] focus:bg-white">
                     @error('email')
                         <p class="mt-1.5 text-xs font-medium text-rose-600">{{ $message }}</p>
@@ -81,7 +81,7 @@
 
             <div class="mt-6 pt-6 border-t border-slate-100 text-center">
                 <a href="{{ route('home') }}" class="text-xs font-bold text-[#6C4AB6] hover:text-[#57389D]">
-                    &larr; Kembali ke Halaman Publik @difMarket
+                    &larr; Kembali ke Halaman Publik Zahran Kopi
                 </a>
             </div>
         </div>

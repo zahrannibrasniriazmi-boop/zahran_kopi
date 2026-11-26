@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const price = waOrderLink.dataset.price;
             const seller = waOrderLink.dataset.seller;
             const qty = Math.max(1, parseInt(waQtyInput.value || '1', 10));
-            const text = `Halo ${seller}, saya ingin memesan produk *${product}* (${price}) sebanyak *${qty} unit* melalui @difMarket. Apakah stok masih tersedia?`;
+            const text = `Halo ${seller}, saya ingin memesan produk *${product}* (${price}) sebanyak *${qty} unit* melalui Zahran Kopi. Apakah stok masih tersedia?`;
             waOrderLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
         };
         waQtyInput.addEventListener('input', updateWaUrl);

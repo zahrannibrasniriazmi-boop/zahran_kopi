@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Pesan Masuk — Admin @difMarket')
+@section('title', 'Pesan Masuk — Admin Zahran Kopi')
 @section('page_title', 'Pesan Kontak Pengunjung')
 @section('page_subtitle', 'Pesan dan pertanyaan yang dikirim melalui halaman Kontak publik')
 

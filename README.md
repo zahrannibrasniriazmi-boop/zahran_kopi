@@ -1,12 +1,12 @@
-# @difMarket — Marketplace UMKM Indonesia
+# Zahran Kopi — Marketplace UMKM Indonesia
 
-**@difMarket** adalah aplikasi web marketplace UMKM modern berbasis **Laravel 13**, **PHP 8.3**, **MySQL**, **Tailwind CSS v4**, dan **JavaScript**. Website ini dirancang untuk membantu pelaku UMKM memasarkan produk unggulan mereka secara online dengan tampilan bersih, elegan, responsif, dan terhubung langsung ke WhatsApp penjual.
+**Zahran Kopi** adalah aplikasi web marketplace UMKM modern berbasis **Laravel 13**, **PHP 8.3**, **MySQL**, **Tailwind CSS v4**, dan **JavaScript**. Website ini dirancang untuk membantu pelaku UMKM memasarkan produk unggulan mereka secara online dengan tampilan bersih, elegan, responsif, dan terhubung langsung ke WhatsApp penjual.
 
 ---
 
 ## Identitas & Konsep Visual
 
-- **Nama Brand:** `@difMarket`
+- **Nama Brand:** `Zahran Kopi`
 - **Bahasa Antarmuka:** Bahasa Indonesia
 - **Palet Warna:**
   - Primary: `#6C4AB6` (Ungu Modern)
@@ -20,11 +20,11 @@
 ## Fitur Utama
 
 ### Halaman Publik
-- **Beranda (`/`):** Navbar dengan logo `@difMarket`, Hero section, Kategori Produk, Produk Unggulan, Produk Terbaru, Keunggulan Berbelanja, dan Footer informasi usaha & media sosial.
+- **Beranda (`/`):** Navbar dengan logo `Zahran Kopi`, Hero section, Kategori Produk, Produk Unggulan, Produk Terbaru, Keunggulan Berbelanja, dan Footer informasi usaha & media sosial.
 - **Katalog Produk (`/produk`):** Daftar produk dari database MySQL lengkap dengan pencarian (`q`), filter kategori (`kategori`), pengurutan harga/terbaru, dan pagination.
 - **Detail Produk (`/produk/{slug}`):** Foto produk besar, nama, harga, kategori, stok, deskripsi lengkap, pemilih jumlah, tombol **Hubungi Penjual via WhatsApp**, serta rekomendasi produk terkait.
 - **Kategori (`/kategori` & `/kategori/{slug}`):** Direktori kategori produk beserta ikon dan daftar produk per kategori.
-- **Tentang Kami (`/tentang-kami`):** Profil usaha, visi, misi, tujuan, dan manfaat `@difMarket` bagi UMKM.
+- **Tentang Kami (`/tentang-kami`):** Profil usaha, visi, misi, tujuan, dan manfaat `Zahran Kopi` bagi UMKM.
 - **Kontak (`/kontak`):** Informasi kontak resmi (email, WhatsApp, alamat usaha) dan formulir pesan dengan validasi server-side Bahasa Indonesia.
 
 ### Dashboard Admin (`/admin`)
@@ -50,8 +50,8 @@
 
 1. **Clone repository atau buka folder project:**
    ```bash
-   git clone https://github.com/<username-anda>/difMarket.git
-   cd difMarket
+   git clone https://github.com/<username-anda>/zahran-kopi.git
+   cd zahran-kopi
    ```
 
 2. **Install dependensi PHP dan Node.js:**
@@ -68,12 +68,12 @@
    ```
 
 4. **Konfigurasi Database MySQL di `.env`:**
-   Buat database `difmarket` di MySQL, lalu pastikan konfigurasi `.env`:
+   Buat database `zahrankopi` di MySQL, lalu pastikan konfigurasi `.env`:
    ```env
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=difmarket
+   DB_DATABASE=zahrankopi
    DB_USERNAME=root
    DB_PASSWORD=
    ```
@@ -92,17 +92,17 @@
 
 ### Akun Demo Administrator (Hasil Seeder)
 - **URL Login:** `http://127.0.0.1:8000/admin/login`
-- **Email:** `admin@difmarket.id`
-- **Kata Sandi:** `AdminDifMarket123!`
+- **Email:** `admin@zahrankopi.id`
+- **Kata Sandi:** `AdminZahranKopi123!`
 
 ---
 
-## Panduan Menghubungkan ke GitHub (`difMarket`)
+## Panduan Menghubungkan ke GitHub (`zahran-kopi`)
 
-1. Buat repository baru bernama **`difMarket`** di akun GitHub Anda (tanpa README/gitignore tambahan).
+1. Buat repository baru bernama **`zahran-kopi`** di akun GitHub Anda (tanpa README/gitignore tambahan).
 2. Hubungkan repository lokal ke GitHub dan push branch `main`:
    ```bash
-   git remote add origin https://github.com/<username-anda>/difMarket.git
+   git remote add origin https://github.com/<username-anda>/zahran-kopi.git
    git branch -M main
    git push -u origin main
    ```

@@ -9,7 +9,7 @@ use Illuminate\View\View;
 class HomeController extends Controller
 {
     /**
-     * Menampilkan halaman beranda marketplace @difMarket.
+     * Menampilkan halaman beranda marketplace Zahran Kopi.
      */
     public function index(): View
     {

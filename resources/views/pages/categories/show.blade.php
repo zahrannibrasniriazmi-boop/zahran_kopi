@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kategori ' . $category->name . ' — @difMarket')
+@section('title', 'Kategori ' . $category->name . ' — Zahran Kopi')
 
 @section('content')
     <section class="bg-white border-b border-slate-200/80">

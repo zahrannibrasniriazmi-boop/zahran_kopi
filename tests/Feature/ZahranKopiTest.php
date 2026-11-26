@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Models\Category;
-use App\Models\ContactMessage;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -12,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
-class DifMarketTest extends TestCase
+class ZahranKopiTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -20,8 +19,8 @@ class DifMarketTest extends TestCase
     {
         return User::create([
             'name' => 'Admin Test',
-            'email' => 'admin@difmarket.id',
-            'password' => Hash::make('AdminDifMarket123!'),
+            'email' => 'admin@zahrankopi.id',
+            'password' => Hash::make('AdminZahranKopi123!'),
             'is_admin' => true,
         ]);
     }
@@ -43,11 +42,11 @@ class DifMarketTest extends TestCase
             'price' => 85000,
             'stock' => 25,
             'is_featured' => true,
-            'seller_name' => 'UMKM Serambi',
+            'seller_name' => 'Zahran Kopi Roastery',
             'seller_whatsapp' => '6281234567890',
         ]);
 
-        $this->get('/')->assertOk()->assertSee('@difMarket')->assertSee($product->name);
+        $this->get('/')->assertOk()->assertSee('Zahran')->assertSee($product->name);
         $this->get('/produk')->assertOk()->assertSee($product->name);
         $this->get('/produk?q=Gayo&kategori=kuliner-minuman')->assertOk()->assertSee($product->name);
         $this->get('/produk?q=TidakAdaProdukXYZ')->assertOk()->assertSee('Produk Tidak Ditemukan');
@@ -88,7 +87,7 @@ class DifMarketTest extends TestCase
             'email' => 'siti@example.com',
             'phone' => '081234567890',
             'subject' => 'Mitra UMKM',
-            'message' => 'Saya ingin mendaftarkan produk kerajinan rotan ke @difMarket.',
+            'message' => 'Saya ingin mendaftarkan produk kerajinan rotan ke Zahran Kopi.',
         ]);
 
         $valid->assertRedirect(route('contact.index'));
@@ -119,7 +118,7 @@ class DifMarketTest extends TestCase
 
         $this->post('/admin/login', [
             'email' => $admin->email,
-            'password' => 'AdminDifMarket123!',
+            'password' => 'AdminZahranKopi123!',
         ])->assertRedirect(route('admin.dashboard'));
 
         $this->actingAs($admin)

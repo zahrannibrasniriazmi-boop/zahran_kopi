@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '@difMarket — Marketplace Produk UMKM Lokal Modern')
+@section('title', 'Zahran Kopi — Marketplace Produk UMKM Lokal Modern')
 
 @section('content')
     <!-- Hero Section -->
@@ -21,7 +21,7 @@
                     </h1>
 
                     <p class="text-base sm:text-lg text-white/85 max-w-2xl leading-relaxed">
-                        <strong>@difMarket</strong> adalah marketplace digital yang mempertemukan masyarakat luas dengan pelaku UMKM pilihan di seluruh Indonesia — mulai dari kuliner autentik, batik tulis, kriya tangan, hingga produk herbal alami.
+                        <strong>Zahran Kopi</strong> adalah marketplace digital yang mempertemukan masyarakat luas dengan pelaku UMKM pilihan di seluruh Indonesia — mulai dari kopi Nusantara, kuliner autentik, batik tulis, kriya tangan, hingga produk herbal alami.
                     </p>
 
                     <div class="flex flex-wrap items-center gap-4 pt-2">
@@ -141,7 +141,7 @@
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-widest text-[#6C4AB6]">Katalog Terkini</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#20243A] mt-1">Produk Terbaru di @difMarket</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#20243A] mt-1">Produk Terbaru di Zahran Kopi</h2>
             </div>
             <a href="{{ route('products.index') }}"
                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 hover:border-[#6C4AB6] text-xs font-bold text-[#20243A] hover:text-[#6C4AB6] transition-colors">
@@ -160,12 +160,12 @@
         </div>
     </section>
 
-    <!-- Keunggulan Berbelanja di @difMarket -->
+    <!-- Keunggulan Berbelanja di Zahran Kopi -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div class="bg-white rounded-[2rem] border border-slate-200/80 p-8 sm:p-12 shadow-sm">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-[#FF9F43]">Kenapa Memilih Kami</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#20243A] mt-2">Keunggulan Berbelanja di @difMarket</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-[#20243A] mt-2">Keunggulan Berbelanja di Zahran Kopi</h2>
                 <p class="mt-3 text-sm sm:text-base text-slate-500">
                     Kami merancang pengalaman belanja yang ringkas dan transparan agar pembeli dan pelaku UMKM saling tumbuh bersama.
                 </p>

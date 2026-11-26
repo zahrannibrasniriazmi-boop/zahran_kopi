@@ -4,6 +4,6 @@
   <circle cx="400" cy="250" r="46" fill="#6C4AB6" fill-opacity="0.12"/>
   <path d="M372 252L394 230L428 264" stroke="#6C4AB6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="422" cy="232" r="9" fill="#FF9F43"/>
-  <text x="400" y="340" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600" fill="#20243A">@difMarket UMKM</text>
+  <text x="400" y="340" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="600" fill="#20243A">Zahran Kopi UMKM</text>
   <text x="400" y="425" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#64748B">Foto produk belum tersedia</text>
 </svg>

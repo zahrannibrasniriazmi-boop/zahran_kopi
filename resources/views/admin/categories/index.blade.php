@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
-@section('title', 'Kelola Kategori — Admin @difMarket')
+@section('title', 'Kelola Kategori — Admin Zahran Kopi')
 @section('page_title', 'Manajemen Kategori Produk')
-@section('page_subtitle', 'Atur pengelompokan produk UMKM pada marketplace @difMarket')
+@section('page_subtitle', 'Atur pengelompokan produk UMKM pada marketplace Zahran Kopi')
 
 @section('content')
     <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">

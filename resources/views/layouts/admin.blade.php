@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Admin Dashboard — @difMarket')</title>
+    <title>@yield('title', 'Admin Dashboard — Zahran Kopi')</title>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,7 +100,7 @@
                 </button>
                 <div>
                     <h1 class="text-lg sm:text-xl font-extrabold text-[#20243A]">@yield('page_title', 'Dashboard Admin')</h1>
-                    <p class="text-xs text-slate-500 hidden sm:block">@yield('page_subtitle', 'Kelola katalog produk dan kategori UMKM @difMarket')</p>
+                    <p class="text-xs text-slate-500 hidden sm:block">@yield('page_subtitle', 'Kelola katalog produk dan kategori UMKM Zahran Kopi')</p>
                 </div>
             </div>
 

@@ -66,7 +66,7 @@ class ProductController extends Controller
 
         return redirect()
             ->route('admin.products.index')
-            ->with('success', 'Produk baru berhasil ditambahkan ke katalog @difMarket.');
+            ->with('success', 'Produk baru berhasil ditambahkan ke katalog Zahran Kopi.');
     }
 
     /**
