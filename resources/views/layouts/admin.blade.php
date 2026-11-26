@@ -11,14 +11,20 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-[#F8F9FC] text-[#20243A] flex flex-col lg:flex-row">
+    <!-- Backdrop Sidebar Mobile -->
+    <div id="admin-sidebar-backdrop"
+         data-toggle-target="admin-sidebar"
+         data-toggle-backdrop="admin-sidebar-backdrop"
+         class="hidden fixed inset-0 bg-[#20243A]/50 backdrop-blur-xs z-30 lg:hidden"></div>
+
     <!-- Sidebar Desktop & Mobile Drawer -->
     <aside id="admin-sidebar"
-           class="hidden lg:flex lg:w-68 lg:flex-col lg:fixed lg:inset-y-0 bg-[#20243A] text-white z-40">
+           class="hidden fixed inset-y-0 left-0 w-72 lg:flex lg:w-68 lg:flex-col bg-[#20243A] text-white z-40 shadow-xl lg:shadow-none">
         <div class="px-6 py-6 border-b border-white/10 flex items-center justify-between">
             <a href="{{ route('admin.dashboard') }}">
                 <x-brand-logo variant="light" size="sm" />
             </a>
-            <button type="button" data-toggle-target="admin-sidebar" class="lg:hidden text-white/70 hover:text-white">
+            <button type="button" data-toggle-target="admin-sidebar" data-toggle-backdrop="admin-sidebar-backdrop" aria-label="Tutup menu admin" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl text-white/70 hover:text-white hover:bg-white/10">
                 <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
@@ -92,8 +98,10 @@
             <div class="flex items-center gap-3">
                 <button type="button"
                         data-toggle-target="admin-sidebar"
+                        data-toggle-backdrop="admin-sidebar-backdrop"
+                        aria-expanded="false"
                         aria-label="Buka menu admin"
-                        class="lg:hidden p-2 rounded-xl border border-slate-200 text-[#20243A] hover:bg-slate-100">
+                        class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl border border-slate-200 text-[#20243A] hover:bg-slate-100">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>

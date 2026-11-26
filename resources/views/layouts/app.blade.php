@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta_description', 'Zahran Kopi - Marketplace produk UMKM lokal Indonesia modern, berkualitas, dan terpercaya.')">
+    <meta name="theme-color" content="#6C4AB6">
+    <meta name="description" content="@yield('meta_description', 'Zahran Kopi - Marketplace produk UMKM lokal Indonesia berkualitas dan terpercaya.')">
     <title>@yield('title', 'Zahran Kopi — Marketplace UMKM Indonesia')</title>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,34 +66,55 @@
                 </div>
 
                 <!-- Tombol Menu Mobile -->
-                <button type="button"
-                        data-toggle-target="mobile-menu"
-                        aria-expanded="false"
-                        aria-label="Buka menu navigasi"
-                        class="md:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-[#20243A] hover:bg-slate-100 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
+                <div class="flex md:hidden items-center gap-2">
+                    <a href="{{ route('products.index') }}"
+                       aria-label="Cari Produk"
+                       class="inline-flex items-center justify-center w-11 h-11 rounded-xl text-[#20243A] hover:bg-slate-100">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
+                        </svg>
+                    </a>
+                    <button type="button"
+                            data-toggle-target="mobile-menu"
+                            aria-expanded="false"
+                            aria-label="Buka menu navigasi"
+                            class="inline-flex items-center justify-center w-11 h-11 rounded-xl text-[#20243A] hover:bg-slate-100">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <!-- Menu Mobile -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-slate-100 space-y-1">
+            <div id="mobile-menu" class="hidden md:hidden pb-5 pt-3 border-t border-slate-100 space-y-2">
+                <form action="{{ route('products.index') }}" method="GET" class="pb-2">
+                    <div class="relative">
+                        <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
+                        </svg>
+                        <input type="text"
+                               name="q"
+                               placeholder="Cari kopi, kuliner, atau kriya UMKM..."
+                               class="w-full min-h-[44px] pl-10 pr-4 py-2.5 rounded-xl bg-[#F8F9FC] border border-slate-200 text-sm focus:bg-white focus:border-[#6C4AB6]">
+                    </div>
+                </form>
+
                 @foreach ($navItems as $item)
                     <a href="{{ route($item['route']) }}"
-                       class="block px-4 py-2.5 rounded-xl text-sm font-semibold {{ $item['active'] ? 'bg-[#F1ECFB] text-[#6C4AB6]' : 'text-[#20243A] hover:bg-slate-50' }}">
+                       class="flex items-center min-h-[44px] px-4 py-2.5 rounded-xl text-sm font-semibold {{ $item['active'] ? 'bg-[#F1ECFB] text-[#6C4AB6]' : 'text-[#20243A] hover:bg-slate-50' }}">
                         {{ $item['label'] }}
                     </a>
                 @endforeach
-                <div class="pt-2 border-t border-slate-100 flex items-center gap-2 px-2">
+                <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
                     @auth
                         @if (auth()->user()->is_admin)
-                            <a href="{{ route('admin.dashboard') }}" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-bold bg-[#6C4AB6] text-white">
+                            <a href="{{ route('admin.dashboard') }}" class="w-full min-h-[44px] flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-bold bg-[#6C4AB6] text-white">
                                 Dashboard Admin
                             </a>
                         @endif
                     @else
-                        <a href="{{ route('admin.login') }}" class="w-full text-center px-4 py-2.5 rounded-full text-sm font-bold bg-[#FF9F43] text-white">
+                        <a href="{{ route('admin.login') }}" class="w-full min-h-[44px] flex items-center justify-center px-4 py-2.5 rounded-xl text-sm font-bold bg-[#FF9F43] text-white">
                             Login Admin
                         </a>
                     @endauth

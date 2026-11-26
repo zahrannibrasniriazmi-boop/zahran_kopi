@@ -1,23 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Toggle menu navigasi mobile & sidebar admin
+    // 1. Toggle menu navigasi mobile & sidebar admin (dengan dukungan Escape & klik luar)
     document.querySelectorAll('[data-toggle-target]').forEach((trigger) => {
         trigger.addEventListener('click', () => {
             const targetId = trigger.getAttribute('data-toggle-target');
             const target = document.getElementById(targetId);
             if (!target) return;
-            target.classList.toggle('hidden');
-            const expanded = trigger.getAttribute('aria-expanded') === 'true';
-            trigger.setAttribute('aria-expanded', String(!expanded));
+
+            const isHidden = target.classList.toggle('hidden');
+            trigger.setAttribute('aria-expanded', String(!isHidden));
+
+            const backdropId = trigger.getAttribute('data-toggle-backdrop');
+            if (backdropId) {
+                document.getElementById(backdropId)?.classList.toggle('hidden', isHidden);
+            }
         });
     });
 
-    // 2. Tutup notifikasi flash secara manual atau otomatis
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        document.querySelectorAll('[data-toggle-target]').forEach((trigger) => {
+            const target = document.getElementById(trigger.getAttribute('data-toggle-target'));
+            if (target && !target.classList.contains('hidden') && trigger.getAttribute('aria-expanded') === 'true') {
+                target.classList.add('hidden');
+                trigger.setAttribute('aria-expanded', 'false');
+                const backdropId = trigger.getAttribute('data-toggle-backdrop');
+                if (backdropId) {
+                    document.getElementById(backdropId)?.classList.add('hidden');
+                }
+            }
+        });
+    });
+
+    // 2. Tutup notifikasi flash secara manual
     document.querySelectorAll('[data-dismiss-alert]').forEach((btn) => {
         btn.addEventListener('click', () => {
-            const alertBox = btn.closest('[data-alert-box]');
-            if (alertBox) {
-                alertBox.remove();
-            }
+            btn.closest('[data-alert-box]')?.remove();
         });
     });
 
@@ -64,9 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.onload = (e) => {
                 imagePreview.src = e.target.result;
                 imagePreview.classList.remove('hidden');
-                if (imagePlaceholder) {
-                    imagePlaceholder.classList.add('hidden');
-                }
+                imagePlaceholder?.classList.add('hidden');
             };
             reader.readAsDataURL(file);
         });
@@ -112,19 +127,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Pembuat pesan WhatsApp interaktif di halaman detail produk
+    // 6. Pembuat pesan WhatsApp & stepper jumlah di halaman detail produk
     const waQtyInput = document.getElementById('wa-qty-input');
-    const waOrderLink = document.getElementById('wa-order-link');
-    if (waQtyInput && waOrderLink) {
-        const updateWaUrl = () => {
-            const phone = waOrderLink.dataset.phone;
-            const product = waOrderLink.dataset.product;
-            const price = waOrderLink.dataset.price;
-            const seller = waOrderLink.dataset.seller;
-            const qty = Math.max(1, parseInt(waQtyInput.value || '1', 10));
-            const text = `Halo ${seller}, saya ingin memesan produk *${product}* (${price}) sebanyak *${qty} unit* melalui Zahran Kopi. Apakah stok masih tersedia?`;
-            waOrderLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    const waOrderLinks = document.querySelectorAll('[data-wa-order-link]');
+    const waSubtotalEl = document.getElementById('wa-subtotal');
+    const qtyMinusBtn = document.querySelector('[data-qty-minus]');
+    const qtyPlusBtn = document.querySelector('[data-qty-plus]');
+
+    if (waQtyInput && waOrderLinks.length > 0) {
+        const formatRupiah = (amount) => 'Rp ' + new Intl.NumberFormat('id-ID').format(amount);
+
+        const updateWaState = () => {
+            const maxQty = parseInt(waQtyInput.getAttribute('max') || '9999', 10);
+            const rawQty = parseInt(waQtyInput.value || '1', 10);
+            const qty = Math.min(Math.max(1, Number.isNaN(rawQty) ? 1 : rawQty), Math.max(1, maxQty));
+            waQtyInput.value = String(qty);
+
+            const unitPrice = parseInt(waQtyInput.dataset.unitPrice || '0', 10);
+            if (waSubtotalEl && unitPrice > 0) {
+                waSubtotalEl.textContent = formatRupiah(unitPrice * qty);
+            }
+
+            waOrderLinks.forEach((link) => {
+                const phone = link.dataset.phone;
+                const product = link.dataset.product;
+                const price = link.dataset.price;
+                const seller = link.dataset.seller;
+                const text = `Halo ${seller}, saya ingin memesan produk *${product}* (${price}) sebanyak *${qty} unit* melalui Zahran Kopi. Apakah stok masih tersedia?`;
+                link.href = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            });
         };
-        waQtyInput.addEventListener('input', updateWaUrl);
+
+        waQtyInput.addEventListener('input', updateWaState);
+        qtyMinusBtn?.addEventListener('click', () => {
+            waQtyInput.value = String(Math.max(1, parseInt(waQtyInput.value || '1', 10) - 1));
+            updateWaState();
+        });
+        qtyPlusBtn?.addEventListener('click', () => {
+            const maxQty = parseInt(waQtyInput.getAttribute('max') || '9999', 10);
+            waQtyInput.value = String(Math.min(maxQty, parseInt(waQtyInput.value || '1', 10) + 1));
+            updateWaState();
+        });
     }
 });

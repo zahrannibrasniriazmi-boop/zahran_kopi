@@ -26,14 +26,52 @@
         color: #20243A;
         font-family: var(--font-sans);
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+        outline: 2px solid rgba(108, 74, 182, 0.55);
+        outline-offset: 2px;
     }
 }
 
+.tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 .card-hover {
-    transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease;
+    transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.22s ease;
 }
 
 .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 35px -12px rgba(108, 74, 182, 0.16);
+    transform: translateY(-3px);
+    border-color: rgba(108, 74, 182, 0.28);
+    box-shadow: 0 14px 28px -14px rgba(32, 36, 58, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .card-hover,
+    .card-hover:hover {
+        transition: none;
+        transform: none;
+    }
 }
